@@ -1,3 +1,4 @@
+# Defined in - @ line 2
 function ssh_eros
-	ssh root@192.168.108.130 -p 2222 $argv
+	ssh root@eros -p 2222 $argv
 end
