@@ -8,6 +8,7 @@ case Darwin
 
     set -gx PATH $PATH $HOME/Library/Android/sdk/platform-tools/
     set -gx PATH $PATH $HOME/Library/Android/sdk/build-tools/26.0.1/
+    set -gx PATH $PATH $HOME/Library/Android/sdk/ndk-bundle/
     set -gx PATH $PATH $HOME/bin
     set -gx PATH $PATH $HOME/Library/Python/2.7/bin/
 
