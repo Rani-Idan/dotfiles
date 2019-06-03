@@ -1,4 +1,4 @@
-function ports
+function listenports
 	switch (uname)
 case Darwin
 lsof -i -n -P
