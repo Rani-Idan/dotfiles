@@ -19,7 +19,9 @@ case Darwin
     test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
 case Linux
-    echo This is linux
+    set -gx PATH $PATH $HOME/bin
+    set -gx ANDROID_SDK_HOME ANDROID_SDK_HOME $HOME/Android/Sdk
+    set -gx PATH $PATH $ANDROID_SDK_HOME/platform-tools/
 
 end
 
