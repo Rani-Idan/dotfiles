@@ -1,5 +1,11 @@
-set fish_greeting ""
+function fish_greeting
+        if not type /usr/games/fortune > /dev/null 2>&1
+                apt-get install fortune
+        end
+        /usr/games/fortune -a
+end
 
+funcsave fish_greeting
 
 switch (uname)
 
@@ -22,6 +28,7 @@ case Linux
     set -gx PATH $PATH $HOME/bin
     set -gx ANDROID_SDK_HOME ANDROID_SDK_HOME $HOME/Android/Sdk
     set -gx PATH $PATH $ANDROID_SDK_HOME/platform-tools/
+    set -gx QT_STYLE_OVERRIDE gtk2
 
 end
 
