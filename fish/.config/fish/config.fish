@@ -26,9 +26,11 @@ case Darwin
 
 case Linux
     set -gx PATH $PATH $HOME/bin
+    set -gx PATH $PATH $HOME/.local/bin
     set -gx ANDROID_SDK_HOME ANDROID_SDK_HOME $HOME/Android/Sdk
     set -gx PATH $PATH $ANDROID_SDK_HOME/platform-tools/
     set -gx QT_STYLE_OVERRIDE gtk2
+
 
 end
 

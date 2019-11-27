@@ -3,14 +3,15 @@ Description=tmux default session (detached)
 Documentation=man:tmux(1)
 
 [Service]
-Type=oneshot
-RemainAfterExit=yes
-ExecStart=/usr/bin/tmux new-session -d -s %H
-ExecStartPost=/usr/bin/tmux source-file /home/%u/.config/tmux/sessions/default
-ExecStop=/usr/bin/tmux kill-server
+Type=forking
 Environment=DISPLAY=:0
 KillMode=none
 User=rani
+Restart=always
+RestartSec=0
+ExecStart=/usr/bin/tmux new-session -d -s %H
+ExecStartPost=/usr/bin/tmux source-file /home/rani/.config/tmux/sessions/default
+ExecStop=/usr/bin/tmux kill-server
 
 [Install]
 WantedBy=multiplexer.target
