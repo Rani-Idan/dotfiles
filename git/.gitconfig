@@ -1,0 +1,30 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[color]
+	ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+[user]
+	email = 25133607+rani-i@users.noreply.github.com
+	name = Rani
+[core]
+	editor = vim
+[credential]
+    helper = cache
+[alias]
+    a = add -A
+    ai = add -i
+    ci = commit
+    d = diff
+    dc = diff --cached
+    pom = push origin master
+    l = log --graph --decorate --relative-date
+    logp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    logap = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[core]
+    excludesfile = ~/.gitignore_global
+
